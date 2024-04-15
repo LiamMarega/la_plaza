@@ -1,18 +1,20 @@
 ---
-const twitchCanal = 'ibai';
+const twitchCanal = import.meta.env.PUBLIC_TWITCH_CANNAL;
+
+const urlParent = import.meta.env.PUBLIC_URL_PARENT;
 ---
 
 <div id='StreamCard' class='flex flex-row justify-center gap-10 pt-14 w-full h-screen pb-20'>
   <iframe
-    src=`https://player.twitch.tv/?channel=${twitchCanal}&parent=la-plaza-seven.vercel.app`
+    src=`https://player.twitch.tv/?channel=${twitchCanal}&parent=${urlParent}`
+    class='border-green-600'
     allowfullscreen='true'
     id='twitch-embed'
   >
   </iframe>
-
   <iframe
     id='twitch-chat'
-    src=`https://www.twitch.tv/embed/${twitchCanal}/chat?parent=la-plaza-seven.vercel.app`
+    src=`https://www.twitch.tv/embed/${twitchCanal}/chat?parent=${urlParent}`
     width='300'
   >
   </iframe>

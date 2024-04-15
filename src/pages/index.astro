@@ -2,20 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import StreamCard from '../components/stream/StreamCard.astro';
 import Loading from '../components/ui/Loading.astro';
+import Banner from '../components/ads/Banner.astro';
 ---
 
 <Layout title='La Plaza'>
-  <main id='main_home' class='flex flex-col items-center flex-co w-full h-screen'>
-    <h1 class='text-6xl pt-14 font-black text-white'>
-      <!-- BIENVENIDO A <span class='text-gradient'>LA PLAZA</span> -->
-    </h1>
+  <main id='main_home' class='flex flex-col items-center flex-co w-full h-full min-h-screen'>
+    <Banner />
 
-    <Loading />
+    <!-- <Loading /> -->
 
-    <div id='streamCard' class='streamCard duration-500'>
-      <StreamCard />
-    </div>
+    <StreamCard />
   </main>
 </Layout>
-
-<script></script>

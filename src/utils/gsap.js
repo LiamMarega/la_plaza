@@ -14,7 +14,7 @@ ScrollTrigger.create({
 });
 
 tl.from('#twitch-embed', {
-  yPercent: 40, // Ajustado a 0 para mantener el elemento centrado
+  yPercent: 45,
   opacity: 0.7,
   //   marginLeft: '18vw',
   width: '70vw',
@@ -23,7 +23,7 @@ tl.from('#twitch-embed', {
   ease: 'none',
 });
 tl.from('#twitch-chat', {
-  yPercent: 40, // Ajustado a 0 para mantener el elemento centrado
+  yPercent: 45,
   display: 'none',
   scale: 0.7,
   duration: 0.5,
