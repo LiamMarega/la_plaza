@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import StreamCard from '../components/stream/StreamCard.astro';
+import Loading from '../components/ui/Loading.astro';
 ---
 
 <Layout title='La Plaza'>
@@ -9,6 +10,12 @@ import StreamCard from '../components/stream/StreamCard.astro';
       <!-- BIENVENIDO A <span class='text-gradient'>LA PLAZA</span> -->
     </h1>
 
-    <StreamCard />
+    <Loading />
+
+    <div id='streamCard' class='streamCard duration-500'>
+      <StreamCard />
+    </div>
   </main>
 </Layout>
+
+<script></script>
