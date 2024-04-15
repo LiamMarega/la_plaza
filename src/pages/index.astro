@@ -1,34 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-
-const twitchCanal = 'ibai';
+import StreamCard from '../components/stream/StreamCard.astro';
 ---
 
 <Layout title='La Plaza'>
-  <main
-    class='animate-gradient-x bg-gradient-to-r from-blue-500 to-green-500 flex items-center flex-col h-screen'
-  >
+  <main id='main_home' class='flex flex-col items-center flex-co w-full h-screen'>
     <h1 class='text-6xl pt-14 font-black text-white'>
-      BIENVENIDO A <span class='text-gradient'>LA PLAZA</span>
+      <!-- BIENVENIDO A <span class='text-gradient'>LA PLAZA</span> -->
     </h1>
-    <div class='flex flex-row gap-10 pt-14 h-full pb-14'>
-      <iframe
-        src=`https://player.twitch.tv/?channel=${twitchCanal}&parent=localhost`
-        allowfullscreen='true'
-        id='twitch-embed'
-      >
-      </iframe>
 
-      <iframe src=`https://www.twitch.tv/embed/${twitchCanal}/chat?parent=localhost` width='300'>
-      </iframe>
-    </div>
+    <StreamCard />
   </main>
 </Layout>
-
-<style>
-  #twitch-embed {
-    width: 60vw;
-    border-radius: 2%;
-  }
-</style>

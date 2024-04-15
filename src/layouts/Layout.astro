@@ -1,4 +1,7 @@
 ---
+import Navbar from '../components/ui/Navbar.astro';
+import CursorFollow from '../components/ui/CursorFollow.astro';
+
 interface Props {
   title: string;
 }
@@ -16,7 +19,9 @@ const { title } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class='animate-gradient-x bg-gradient-to-r from-blue-500 to-green-500'>
+    <Navbar />
+    <CursorFollow />
     <slot />
   </body>
 </html>

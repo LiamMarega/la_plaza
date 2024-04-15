@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<header>
+  <nav
+    class='bg-black bg-opacity-10 text-white text-lg font-light px-2 md:px-12 py-8 flex items-center md:justify-between'
+  >
+    <div class='flex gap-x-5 w-24 md:w-48'>
+      <img src='/images/logos/logo_white.webp' alt='La Plaza Logo' class="size" />
+    </div>
+    <ul class='flex gap-10'>
+      <li><a href='#about'>About</a></li>
+      <li><a href='#work'>Work</a></li>
+      <li><a href='#contact'>Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  @font-face {
+    font-family: 'ShantellSans';
+    src: url('fonts/ShantellSans-Light.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+    font-weight: lighter;
+  }
+  header,
+  nav {
+    font-family: 'ShantellSans', sans-serif;
+    font-weight: lighter;
+  }
+</style>

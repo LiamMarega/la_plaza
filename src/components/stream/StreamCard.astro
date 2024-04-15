@@ -1,0 +1,28 @@
+---
+const twitchCanal = 'ibai';
+---
+
+<div id='StreamCard' class='flex flex-row justify-center gap-10 pt-14 w-full h-screen pb-14'>
+  <iframe
+    src=`https://player.twitch.tv/?channel=${twitchCanal}&parent=localhost`
+    allowfullscreen='true'
+    id='twitch-embed'
+  >
+  </iframe>
+
+  <iframe
+    id='twitch-chat'
+    src=`https://www.twitch.tv/embed/${twitchCanal}/chat?parent=localhost`
+    width='300'
+  >
+  </iframe>
+</div>
+
+<style>
+  #twitch-embed {
+    width: 60vw;
+    border-radius: 2%;
+  }
+</style>
+
+<script src='../../utils/gsap.js'></script>
